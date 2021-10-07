@@ -2,7 +2,7 @@
 
 let codigo = prompt("ingrese el codigo de pedido");
 
-let getdatos = "https://sheetdb.io/api/v1/7yje89cwgnizk"; 
+let getdatos = "https://sheetdb.io/api/v1/wy8b9jp5ln99i"; 
 fetch(getdatos)
   .then((data) => data.json())
   .then((datospedidos) => {
