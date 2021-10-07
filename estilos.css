@@ -40,6 +40,7 @@ font-family: poppins;
     grid-column: 1/2;
     margin-top: 50px;
     border-radius: 10px;
+    transition: 1s;
 }
 
 
@@ -49,6 +50,7 @@ font-family: poppins;
     grid-column: 2/3;
     margin-top: 50px;
     border-radius: 10px;
+    transition: 1s;
     
 }
 
@@ -58,6 +60,7 @@ font-family: poppins;
     grid-column: 3/4;
     margin-top: 50px;
     border-radius: 10px;
+    transition: 1s;
 
 }
 
@@ -68,6 +71,7 @@ font-family: poppins;
     margin-right: 40px;
     margin-top: 50px;
     border-radius: 10px;
+    transition: 1s;
     
 }
 
@@ -78,8 +82,7 @@ font-family: poppins;
     display: grid; 
   grid-auto-columns: 1fr; 
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;  
-  gap: 0px 0px; 
-  border-radius: 33px;
+  gap: 0px 0px;   border-radius: 33px;
 }
 
 
