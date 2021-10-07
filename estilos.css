@@ -8,7 +8,7 @@ font-family: poppins;
     font-size: 20px;
     margin-top: 20px;
     margin-left: 5%;
-    color: white;
+    color: black;
 }
 #contenedor1 h2{
     font-weight: 500;
@@ -16,30 +16,71 @@ font-family: poppins;
     margin-top: 10px;
     margin-left: 5%;
     margin-right: 5%;
-    color: white;
+    color: black;
+    font-weight: 300;
 }
 .contenedor{
     margin: 50px 64px 0px 64px;
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr 1fr; 
-    grid-template-rows: 300px 30px 530px; 
+    grid-template-rows: 200px 300px 30px 530px; 
     gap: 0px 0px; 
 }
 
 #contenedor1{
-    grid-row: 1/2;
+    grid-row: 2/3;
     grid-column: 1/5;
     display: grid; 
     grid-template-columns: auto auto auto auto; 
     gap: 0px 50px; 
 }
 
+.buscador{
+    grid-column: 1/5;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-rows: 100px 100px;
+    justify-content: center;
+    justify-items: center;
+
+}
+
+#codigoderastreo{
+    background-color: #f3f2f2;
+    width: 639px;
+    height: 50px;
+    border-radius: 50px;
+    background: #f3f2f2;
+    box-shadow: inset 20px 20px 60px #cfcece,
+                inset -20px -20px 60px #ffffff;
+                border: none;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    grid-row: 1/2;
+}
+#boton{
+    width: 297px;
+    height: 50px;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow:  20px 20px 60px #d9d9d9,
+                -20px -20px 60px #ffffff;
+    border: none;
+    grid-row: 2/3;
+}
+
+
+
+
 #pedido{
     height: 150px;
-    background-color: #80A2D5;
     grid-column: 1/2;
     margin-top: 50px;
     border-radius: 10px;
+    background: #ffffff;
+    box-shadow:  20px 20px 60px #d9d9d9,
+                -20px -20px 60px #ffffff;
     transition: 1s;
 }
 
@@ -50,6 +91,9 @@ font-family: poppins;
     grid-column: 2/3;
     margin-top: 50px;
     border-radius: 10px;
+    background: #ffffff;
+    box-shadow:  20px 20px 60px #d9d9d9,
+                -20px -20px 60px #ffffff;
     transition: 1s;
     
 }
@@ -60,6 +104,9 @@ font-family: poppins;
     grid-column: 3/4;
     margin-top: 50px;
     border-radius: 10px;
+    background: #ffffff;
+    box-shadow:  20px 20px 60px #d9d9d9,
+                -20px -20px 60px #ffffff;
     transition: 1s;
 
 }
@@ -71,20 +118,24 @@ font-family: poppins;
     margin-right: 40px;
     margin-top: 50px;
     border-radius: 10px;
+    background: #ffffff;
+    box-shadow:  20px 20px 60px #d9d9d9,
+                -20px -20px 60px #ffffff;
     transition: 1s;
     
 }
 
 .contenedor2{
-    background-color: #F2F2F2;
+    background: #ffffff;
+    box-shadow: inset 20px 20px 60px #d9d9d9,
+            inset -20px -20px 60px #ffffff;
     grid-column: 2/4;
-    grid-row: 2/3;
+    grid-row: 3/4;
     display: grid; 
   grid-auto-columns: 1fr; 
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;  
   gap: 0px 0px;   border-radius: 33px;
 }
-
 
 #barra{
     
@@ -92,15 +143,15 @@ font-family: poppins;
     transition: 2s;
 }
 
-
-
-
 .contenedor3{
     grid-column: 2/4;
-    grid-row: 3/4;
-    background-color:#F2F2F2;
+    grid-row: 4/5;
+   
     margin-top: 60px;
     border-radius: 30px;
+    background: #ffffff;
+    box-shadow:  20px 20px 60px #d9d9d9,
+             -20px -20px 60px #ffffff;
     display: grid; 
     grid-template-columns: auto auto auto; 
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; 
@@ -165,17 +216,35 @@ font-family: poppins;
 
 
 
+
+
+
+
+
 @media (max-width: 1150px){
     .contenedor{
         margin: 0%;
-        grid-template-rows: 1fr 1fr ;
+        grid-template-rows: 300px 1fr 1fr 1fr;
         justify-items: center;
         justify-content: center;
+    }
+
+    .buscador{
+        grid-row: 1/2;
+        margin-top: 100px;
+    }
+    #codigoderastreo{
+        height: 40px;
+        width: 400px;
+    }
+
+    #contenedor1{
+        grid-row: 2/3;
     }
     
     .contenedor3{
         grid-column: 1/5;
-        grid-row: 2/3;
+        grid-row: 3/4;
         width: 300px;
     }
     #pedido{

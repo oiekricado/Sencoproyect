@@ -1,6 +1,6 @@
 "use strcit";
-
-let codigo = prompt("ingrese el codigo de pedido");
+function verificar() {
+let codigo = document.getElementById("codigoderastreo").value;/*prompt("ingrese el codigo de pedido");*/
 
 let getdatos = "https://sheetdb.io/api/v1/wy8b9jp5ln99i"; 
 fetch(getdatos)
@@ -101,3 +101,5 @@ fetch(getdatos)
     console.log("todo cargo bien");
   });
   
+
+}
