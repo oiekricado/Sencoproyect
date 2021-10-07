@@ -1,0 +1,28 @@
+body{
+    background-color: #2F2E41;
+    color: white;
+    font-family: poppins;
+    font-weight: 300;
+
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-rows: 40% 90px 90px 40%; 
+    gap: 3% 0%; 
+}
+
+#buscador{
+    background-color: #CECECE;
+    width: 639px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 30px;
+    text-align: center;
+    grid-row: 2/3;
+}
+
+#boton{
+    width: 297px;
+    border-radius: 50px;
+    
+}
+
