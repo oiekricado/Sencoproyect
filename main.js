@@ -27,12 +27,7 @@ function verificar() {
       <div class="bg-gray-100 w-64 h-auto p-3 rounded-md my-5 mx-10 shadow-xl ">
           <h1 class="text-lg ">🏢Empresa</h1>
           <h2 class="text-xl">${pedidoencontrado.EMPRESA}</h2>
-      </div>
-
-      <div class="bg-gray-100 w-64 h-auto p-3 rounded-md my-5 mx-10 shadow-xl ">
-          <h1 class="text-lg ">💵Forma de pago</h1>
-          <h2 class="text-xl">${pedidoencontrado.FORMA_DE_PAGO}</h2>
-      </div>`;
+      </div>`; 
 
       ////////////////////////contenedor2///////////////
 
