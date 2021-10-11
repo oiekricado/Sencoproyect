@@ -1,62 +1,61 @@
-<!DOCTYPE html>
-<html lang="es">
+<html  lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senco Pedidos Proyect Ricardo Barragan</title>
-<script src="main.js"></script> 
-    
-    <link rel="stylesheet" href="estilos.css">
-    
-    
+  <meta name="theme-color" content="#4285f9">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <script src="main.js"></script>
+  <!-- ... -->
 </head>
 <body>
-    <div class="contenedor">
-
-        <div class="buscador">
-            <input type="text" value="" id="codigoderastreo">
-            <button type="submit" onclick="verificar()" id="boton">Rastrear</button>
-        </div>
-    
+  <!-- ... -->
 
 
-       <div id="contenedor1">
-       
-       </div>
+  <div id="contenedor" class=" h-auto">
 
-       <div class="contenedor2">
-
-               <div id="barra">
-                  
-               </div>
-           
-       </div>
-       
-
-
-
-       <div class="contenedor3">
-
-               <h1 id="titulo">Historial</h1>
-
-               <p id="autorizacion">Autorizacion</p> 
-                <p id="autorizacionfecha"></p>
-
-                <p id="diseño">Diseño</p> 
-                <p id="diseñofecha"></p>
-
-                <p id="impresion">Impresion</p> 
-                <p id="impresionfecha"></p>
-
-                <p id="taller">Taller</p> 
-                <p id="tallerfecha"></p>
-
-                <p id="entrega">Entregado</p> 
-                <p id="entregafecha"></p>
-       </div>
+    <div id="buscador" class=" w-auto  h-56 my-5 grid justify-items-center grid-cols-3 grid-rows-2" >
+        <input type="text" value="" id="codigoderastreo" class=" bg-gray-100 shadow-2xl text-center rounded-full h-11 w-96  my-8 col-start-2 col-end-3 row-start-1">
+        <button type="submit" onclick="verificar()" id="boton" class=" bg-gray-50 rounded-3xl w-56 h-14 shadow-xl col-start-2 col-end-3 row-start-2">Rastrear</button>
     </div>
-    <!--<script src="datos.js"></script> --> 
+
     
+
+   <div id="contenedor1" class="grid  sm:grid-cols-1 justify-items-center md:grid-cols-2 lg:grid-cols-4 ">
+   
+   </div>
+ 
+   <div id="contenedor2" class=" bg-gray-900 w-screen rounded-full  h-10">
+
+           
+              
+           </div>
+       
+   </div>
+   
+
+
+
+   <div id="contenedor3" class=" bg-gray-200 rounded-t-xl shadow-2xl p-4 h-56 mt-8 ">
+
+           <h1 id="titulo" class="text-xl mb-4">Historial</h1>
+
+           <p id="autorizacion">Autorizacion</p> 
+            <p id="autorizacionfecha"></p>
+
+            <p id="diseño">Diseño</p> 
+            <p id="diseñofecha"></p>
+
+            <p id="impresion">Impresion</p> 
+            <p id="impresionfecha"></p>
+
+            <p id="taller">Taller</p> 
+            <p id="tallerfecha"></p>
+
+            <p id="entrega">Entregado</p> 
+            <p id="entregafecha"></p>
+   </div>
+</div>
+
+  
 </body>
 </html>

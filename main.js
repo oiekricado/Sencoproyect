@@ -1,105 +1,92 @@
 "use strcit";
 function verificar() {
-let codigo = document.getElementById("codigoderastreo").value;/*prompt("ingrese el codigo de pedido");*/
+  let codigo =document.getElementById("codigoderastreo").value; /*prompt("ingrese el codigo de pedido");*/
 
-let getdatos = "https://sheetdb.io/api/v1/wy8b9jp5ln99i"; 
-fetch(getdatos)
-  .then((data) => data.json())
-  .then((datospedidos) => {
-    function encontrarpedido(foliocodigo) {
-      return foliocodigo.FOLIO === codigo;
-    }
-    let pedidoencontrado = datospedidos.find(encontrarpedido);
-    
+  let getdatos = "https://sheetdb.io/api/v1/wy8b9jp5ln99i";
+  fetch(getdatos)
+    .then((data) => data.json())
+    .then((datospedidos) => {
+      function encontrarpedido(foliocodigo) {
+        return foliocodigo.FOLIO === codigo;
+      }
+      let pedidoencontrado = datospedidos.find(encontrarpedido);
 
+      ////////////////////////contenedor1////////////////
+      let contenedor1 = document.getElementById("contenedor1");
+      contenedor1.innerHTML = `
+      <div class="bg-gray-100 w-56 h-auto p-3 rounded-md my-5 mx-10 shadow-xl    ">
+      <h1 class="text-lg ">📋Pedido</h1>
+      <h2 class="text-xl">${pedidoencontrado.FOLIO}</h2>
+      </div>
 
-    ////////////////////////contenedor1////////////////
-    let contenedor1 = document.getElementById("contenedor1");
-    contenedor1.innerHTML = `
-        <div id="pedido">
-        <h1>📋Pedido</h1>
-        <h2>${pedidoencontrado.FOLIO}</h2>
-        </div>
+      <div class="bg-gray-100 w-56 h-auto p-3 rounded-md my-5 mx-10 shadow-xl ">
+          <h1 class="text-lg ">👨‍💼Cliente</h1>
+          <h2 class="text-xl">${pedidoencontrado.CLIENTE}</h2>
+      </div>
 
-        <div id="cliente">
-        <h1>👨‍💼Cliente</h1>
-        <h2>${pedidoencontrado.CLIENTE}</h2>
-        </div>
+      <div class="bg-gray-100 w-64 h-auto p-3 rounded-md my-5 mx-10 shadow-xl ">
+          <h1 class="text-lg ">🏢Empresa</h1>
+          <h2 class="text-xl">${pedidoencontrado.EMPRESA}</h2>
+      </div>
 
-        <div id="empresa">
-        <h1>🏢 Empresa</h1>
-        <h2>${pedidoencontrado.EMPRESA}</h2>
-        </div>
+      <div class="bg-gray-100 w-64 h-auto p-3 rounded-md my-5 mx-10 shadow-xl ">
+          <h1 class="text-lg ">💵Forma de pago</h1>
+          <h2 class="text-xl">${pedidoencontrado.FORMA_DE_PAGO}</h2>
+      </div>`;
 
-        <div id="formadepago">
-        <h1>💵 Forma de pago</h1>
-        <h2>${pedidoencontrado.FORMA_DE_PAGO}</h2>
-        </div>`;
+      ////////////////////////contenedor2///////////////
 
+      if (pedidoencontrado.AUTORIZACION.length !== 0) {
+        let barra = document.getElementById("contenedor2");
+       barra.innerHTML = `<div id="barra" class="bg-purple-300 h-10 w-10 rounded-full ">
+       `;}
 
+      if (pedidoencontrado.DISEÑO.length !== 0) {
+        let barra = document.getElementById("barra");
+        barra.innerHTML = `<div id="barra" class="bg-blue-200 h-10 w-60 rounded-full ">
+       `;
+      }
 
-    ////////////////////////contenedor2///////////////
-    
-   if (pedidoencontrado.AUTORIZACION.length !== 0) {
-     let barra = document.getElementById("barra")
-     barra.setAttribute("style","grid-column: 1/2;"); 
-     barra.style.background = "#8E44AD";
-    
-   }
+      if (pedidoencontrado.IMPRESIÓN.length !== 0) {
+        let barra = document.getElementById("barra");
+        barra.innerHTML = `<div id="barra" class="bg-orange-300 h-10 w-80 rounded-full ">
+        `;
+      }
 
-   if (pedidoencontrado.DISEÑO.length !== 0) {
-    let barra = document.getElementById("barra")
-    barra.setAttribute("style","grid-column: 1/3;"); 
-    barra.style.background = "#3498DB";
-    
-  }
+      if (pedidoencontrado.TALLER.length !== 0) {
+        let barra = document.getElementById("barra");
+        barra.innerHTML = `<div id="barra" class="bg-red-300 h-10 w-96 rounded-full "> 
+       `;
+      }
 
-  if (pedidoencontrado.IMPRESIÓN.length !== 0) {
-    let barra = document.getElementById("barra")
-    barra.setAttribute("style","grid-column: 1/4;"); 
-    barra.style.background = "#E67E22";
-    
-  }
+      if (pedidoencontrado.ENTREGA.length !== 0) {
+        let barra = document.getElementById("barra");
+        barra.innerHTML = `<div id="barra" class="bg-green-300 h-10 w-screen rounded-full "> 
+        `;
+      }
 
-  if (pedidoencontrado.TALLER.length !== 0) {
-    let barra = document.getElementById("barra")
-    barra.setAttribute("style","grid-column: 1/5;"); 
-    barra.style.background = "#E74C3C";
-    
-  }
+      console.log(pedidoencontrado.TALLER.indexOf(pedidoencontrado.TALLER));
+      console.log(pedidoencontrado.TALLER.length);
 
-  if (pedidoencontrado.ENTREGA.length !== 0) {
-    let barra = document.getElementById("barra")
-    barra.setAttribute("style","grid-column: 1/6;");  
-    barra.style.background = "#2ECC71";
+      /////////////////////contenedor3///////////////////
 
-  }
+      
 
+      let autorizacion = document.getElementById("autorizacionfecha");
+      autorizacion.innerHTML = pedidoencontrado.AUTORIZACION;
 
-  console.log(pedidoencontrado.TALLER.indexOf(pedidoencontrado.TALLER));
-  console.log(pedidoencontrado.TALLER.length)
+      let diseño = document.getElementById("diseñofecha");
+      diseño.innerHTML = pedidoencontrado.DISEÑO;
 
-    /////////////////////contenedor3///////////////////
-    let autorizacion = document.getElementById("autorizacionfecha");
-    autorizacion.innerHTML = pedidoencontrado.AUTORIZACION;
+      let impresion = document.getElementById("impresionfecha");
+      impresion.innerHTML = pedidoencontrado.IMPRESIÓN;
 
-    let diseño = document.getElementById("diseñofecha");
-    diseño.innerHTML = pedidoencontrado.DISEÑO;
+      var taller = document.getElementById("tallerfecha");
+      taller.innerHTML = pedidoencontrado.TALLER;
 
-    let impresion = document.getElementById("impresionfecha");
-    impresion.innerHTML = pedidoencontrado.IMPRESIÓN;
+      let entrega = document.getElementById("entregafecha");
+      entrega.innerHTML = pedidoencontrado.ENTREGA;
 
-    var taller = document.getElementById("tallerfecha");
-    taller.innerHTML = pedidoencontrado.TALLER;
-
-    let entrega = document.getElementById("entregafecha");
-    entrega.innerHTML = pedidoencontrado.ENTREGA;
-
-    
-    
-
-    console.log("todo cargo bien");
-  });
-  
-
+      console.log("todo cargo bien");
+    });
 }
