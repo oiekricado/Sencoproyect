@@ -2,7 +2,7 @@
 function verificar() {
   let codigo =document.getElementById("codigoderastreo").value; /*prompt("ingrese el codigo de pedido");*/
 
-  let getdatos = "https://sheetdb.io/api/v1/wy8b9jp5ln99i";
+  let getdatos = "https://sheetdb.io/api/v1/jr27h9yaoi7tr";
   fetch(getdatos)
     .then((data) => data.json())
     .then((datospedidos) => {
@@ -33,30 +33,30 @@ function verificar() {
 
       if (pedidoencontrado.AUTORIZACION.length !== 0) {
         let barra = document.getElementById("contenedor2");
-       barra.innerHTML = `<div id="barra" class="bg-purple-300 h-10 w-10 rounded-full ">
+       barra.innerHTML = `<div id="barra" class="bg-purple-300 h-10 w-1/5 rounded-full ">
        `;}
 
       if (pedidoencontrado.DISEÑO.length !== 0) {
-        let barra = document.getElementById("barra");
-        barra.innerHTML = `<div id="barra" class="bg-blue-200 h-10 w-60 rounded-full ">
+        let barra = document.getElementById("contenedor2");
+        barra.innerHTML = `<div id="barra" class="bg-blue-600 h-10 w-2/5 rounded-full ">
        `;
       }
 
       if (pedidoencontrado.IMPRESIÓN.length !== 0) {
-        let barra = document.getElementById("barra");
-        barra.innerHTML = `<div id="barra" class="bg-orange-300 h-10 w-80 rounded-full ">
+        let barra = document.getElementById("contenedor2");
+        barra.innerHTML = `<div id="barra" class="bg-yellow-500 h-10 w-3/5 rounded-full ">
         `;
       }
 
       if (pedidoencontrado.TALLER.length !== 0) {
-        let barra = document.getElementById("barra");
-        barra.innerHTML = `<div id="barra" class="bg-red-300 h-10 w-96 rounded-full "> 
+        let barra = document.getElementById("contenedor2");
+        barra.innerHTML = `<div id="barra" class="bg-red-300 h-10 w-4/5 rounded-full "> 
        `;
       }
 
       if (pedidoencontrado.ENTREGA.length !== 0) {
-        let barra = document.getElementById("barra");
-        barra.innerHTML = `<div id="barra" class="bg-green-300 h-10 w-screen rounded-full "> 
+        let barra = document.getElementById("contenedor2");
+        barra.innerHTML = `<div id="barra" class="bg-green-300 h-10 w-full rounded-full "> 
         `;
       }
 
