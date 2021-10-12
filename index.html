@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   <script src="main.js"></script>
+  <link rel="stylesheet" href="estilos.css">
   <!-- ... -->
 </head>
 <body>
@@ -13,9 +14,12 @@
 
   <div id="contenedor" class=" h-auto grid grid justify-items-center ">
 
+    <div class=" mx-8 mt-11 text-center  md:mt-8 text-xl ">¡Hola!👋 por favor ingresa tu No. de folio para ver tu proceso de tu pedido 💙</div>
+
     <div id="buscador" class=" w-auto  h-56 my-5 grid justify-items-center grid-cols-3 grid-rows-2" >
+      
         <input type="text" value="" id="codigoderastreo" class=" bg-gray-100 shadow-2xl text-center rounded-full h-11 w-96  my-8 col-start-2 col-end-3 row-start-1">
-        <button type="submit" onclick="verificar()" id="boton" class=" bg-gray-50 rounded-3xl w-56 h-14 shadow-xl col-start-2 col-end-3 row-start-2">Rastrear</button>
+        <button type="submit" onclick="verificar()" id="boton" class="  duration-500 hover:bg-blue-100 hover: bg-gray-50 rounded-3xl w-56  h-14 shadow-xl col-start-2 col-end-3 row-start-2">Rastrear</button>
     </div>
 
     
@@ -24,11 +28,10 @@
    
    </div>
  
-   <div id="contenedor2" class="flex bg-gray-200 shadow-inner w-screen md:w-2/3  rounded-full  h-10  ">
-
-           
+   <div id="contenedor2" class="flex bg-gray-200 shadow-inner w-screen md:w-2/3  rounded-full  h-10 ">
+   </div>
               
-           </div>
+          
        
    </div>
    
@@ -51,10 +54,10 @@
             <p id="taller">Taller</p> 
             <p id="tallerfecha"></p>
 
-            <p id="entrega">Entregado</p> 
+            <p id="entrega">Entrega</p> 
             <p id="entregafecha"></p>
    </div>
-</div>
+
 
   
 </body>

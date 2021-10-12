@@ -1,5 +1,5 @@
 "use strcit";
-function verificar() {
+ function verificar() {
   let codigo =document.getElementById("codigoderastreo").value; /*prompt("ingrese el codigo de pedido");*/
 
   let getdatos = "https://sheetdb.io/api/v1/jr27h9yaoi7tr";
@@ -33,30 +33,31 @@ function verificar() {
 
       if (pedidoencontrado.AUTORIZACION.length !== 0) {
         let barra = document.getElementById("contenedor2");
-       barra.innerHTML = `<div id="barra" class="bg-purple-300 h-10 w-1/5 rounded-full ">
+       barra.innerHTML = `
+       <div id="barra" class="duration-500 bg-purple-300 h-10 w-1/5 rounded-full ">
        `;}
 
       if (pedidoencontrado.DISEÑO.length !== 0) {
         let barra = document.getElementById("contenedor2");
-        barra.innerHTML = `<div id="barra" class="bg-blue-600 h-10 w-2/5 rounded-full ">
+        barra.innerHTML = `<div id="barra" class="  duration-500 hover:bg-blue-800  bg-blue-600 h-10 w-2/5 rounded-full ">
        `;
       }
 
       if (pedidoencontrado.IMPRESIÓN.length !== 0) {
         let barra = document.getElementById("contenedor2");
-        barra.innerHTML = `<div id="barra" class="bg-yellow-500 h-10 w-3/5 rounded-full ">
+        barra.innerHTML = `<div id="barra" class="duration-500 hover:bg-yellow-700 bg-yellow-500 h-10 w-3/5 rounded-full ">
         `;
       }
 
       if (pedidoencontrado.TALLER.length !== 0) {
         let barra = document.getElementById("contenedor2");
-        barra.innerHTML = `<div id="barra" class="bg-red-300 h-10 w-4/5 rounded-full "> 
+        barra.innerHTML = `<div id="barra" class="duration-500 bg-red-300 hover:bg-red-500 h-10 w-4/5 rounded-full "> 
        `;
       }
 
       if (pedidoencontrado.ENTREGA.length !== 0) {
         let barra = document.getElementById("contenedor2");
-        barra.innerHTML = `<div id="barra" class="bg-green-300 h-10 w-full rounded-full "> 
+        barra.innerHTML = `<div id="barra" class="duration-500 hover:bg-green-400 bg-green-300 h-10 w-full rounded-full "> 
         `;
       }
 
