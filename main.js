@@ -2,15 +2,18 @@
  function verificar() {
   let codigo =document.getElementById("codigoderastreo").value; /*prompt("ingrese el codigo de pedido");*/
 
-  let getdatos = "https://sheetdb.io/api/v1/jr27h9yaoi7tr";
+  let getdatos = "https://sheetdb.io/api/v1/wy8b9jp5ln99i";
   fetch(getdatos)
     .then((data) => data.json())
     .then((datospedidos) => {
       function encontrarpedido(foliocodigo) {
+        
         return foliocodigo.FOLIO === codigo;
       }
       let pedidoencontrado = datospedidos.find(encontrarpedido);
-
+      
+      
+     
       ////////////////////////contenedor1////////////////
       let contenedor1 = document.getElementById("contenedor1");
       contenedor1.innerHTML = `
@@ -61,8 +64,7 @@
         `;
       }
 
-      console.log(pedidoencontrado.TALLER.indexOf(pedidoencontrado.TALLER));
-      console.log(pedidoencontrado.TALLER.length);
+     
 
       /////////////////////contenedor3///////////////////
 
@@ -83,11 +85,11 @@
       let entrega = document.getElementById("entregafecha");
       entrega.innerHTML = pedidoencontrado.ENTREGA;
 
-      console.log("todo cargo bien");
+      
     });
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    let getdatosSD = "https://sheetdb.io/api/v1/jr27h9yaoi7tr?sheet=SD";
+    let getdatosSD = "https://sheetdb.io/api/v1/wy8b9jp5ln99i?sheet=SD";
   fetch(getdatosSD)
     .then((data) => data.json())
     .then((datospedidos) => {
@@ -146,8 +148,7 @@
         `;
       }
 
-      console.log(pedidoencontrado.TALLER.indexOf(pedidoencontrado.TALLER));
-      console.log(pedidoencontrado.TALLER.length);
+      
 
       /////////////////////contenedor3///////////////////
 
@@ -168,7 +169,7 @@
       let entrega = document.getElementById("entregafecha");
       entrega.innerHTML = pedidoencontrado.ENTREGA;
 
-      console.log("todo cargo bien");
+     
     });
 
 }
