@@ -13,7 +13,7 @@
       let pedidoencontrado = datospedidos.find(encontrarpedido);
       
       
-     
+      console.log(pedidoencontrado)
       ////////////////////////contenedor1////////////////
       let contenedor1 = document.getElementById("contenedor1");
       contenedor1.innerHTML = `
