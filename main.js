@@ -1,6 +1,6 @@
 "use strcit";
  function verificar() {
-  let codigo =document.getElementById("codigoderastreo").value; /*prompt("ingrese el codigo de pedido");*/
+  let codigo =document.getElementById("codigoderastreo").value.toUpperCase(); /*prompt("ingrese el codigo de pedido");*/
 
   let getdatos = "https://sheetdb.io/api/v1/wy8b9jp5ln99i";
   fetch(getdatos)
